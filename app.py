@@ -6,6 +6,8 @@ st.set_page_config(page_title="AI Study Mentor", page_icon="🧠", layout="wide"
 
 # ===== STYLE (RESPONSIVE + DỄ NHÌN) =====
 st.markdown("""
+<style>
+
 /* FIX CHỮ */
 h1, h2, h3, label {
     color: #ffffff !important;
@@ -120,8 +122,7 @@ st.markdown("""
 
 # ===== RESPONSIVE LAYOUT =====
 if menu == "🏠 Trang chính":
-col1, col2 = st.columns([1,1], gap="large")
-
+    col1, col2 = st.columns([1,1], gap="large")
 with col1:
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
@@ -178,7 +179,14 @@ elif menu == "📊 Phân tích":
 
 # ===== DASHBOARD =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
+if menu == "🏠 Trang chính":
+    # code trang chính
+
+elif menu == "📊 Phân tích":
+    # code phân tích
+
 elif menu == "📈 Tiến trình":
+    # code dashboard
 
 progress = diem / mucTieu if mucTieu > 0 else 0
 st.progress(min(progress, 1.0))
