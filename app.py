@@ -6,6 +6,23 @@ st.set_page_config(page_title="AI Study Mentor", page_icon="🧠", layout="wide"
 
 # ===== STYLE (RESPONSIVE + DỄ NHÌN) =====
 st.markdown("""
+/* FIX CHỮ */
+h1, h2, h3, label {
+    color: #ffffff !important;
+}
+
+p {
+    color: #cbd5e1 !important;
+}
+
+/* HOVER CARD */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
 <style>
 
 /* FONT */
@@ -81,10 +98,28 @@ input, textarea {
 """, unsafe_allow_html=True)
 
 # ===== TITLE =====
+st.sidebar.title("📌 Menu")
+
+menu = st.sidebar.radio("Chọn chức năng", [
+    "🏠 Trang chính",
+    "📊 Phân tích",
+    "📈 Tiến trình"
+])
 st.markdown("### 🏫 Trường PTDTNT THPT Đam San")
-st.markdown('<div class="title">🌿 AI Study Mentor</div>', unsafe_allow_html=True)
+st.markdown("""
+<div style="text-align:center; padding: 30px 0;">
+    <h1 style="font-size:50px; background: linear-gradient(90deg,#f472b6,#fb923c);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+        🌿 AI Study Mentor
+    </h1>
+    <p style="color:#cbd5e1; font-size:18px;">
+        Trợ lý học tập thông minh giúp bạn đạt mục tiêu nhanh hơn 🚀
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # ===== RESPONSIVE LAYOUT =====
+if menu == "🏠 Trang chính":
 col1, col2 = st.columns([1,1], gap="large")
 
 with col1:
@@ -129,7 +164,8 @@ def ai_mentor(d, name, target, time, mood, subject):
     return result
 
 # ===== BUTTON =====
-if st.button("🚀 Phân tích"):
+elif menu == "📊 Phân tích":
+    if st.button("🚀 Phân tích"):
     if ten == "":
         st.warning("Nhập tên!")
     else:
@@ -142,7 +178,7 @@ if st.button("🚀 Phân tích"):
 
 # ===== DASHBOARD =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
-st.subheader("📈 Tiến trình")
+elif menu == "📈 Tiến trình":
 
 progress = diem / mucTieu if mucTieu > 0 else 0
 st.progress(min(progress, 1.0))
