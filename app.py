@@ -47,19 +47,7 @@ Biến việc học thành hệ thống có chiến lược 🚀
 
 </div>
 """, unsafe_allow_html=True)
-st.markdown("""
-<div style="padding:60px 20px; text-align:center; border-radius:20px;
-background: linear-gradient(135deg,#6366f1,#a855f7);
-color:white; margin-bottom:30px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
-
-    <h1 style="font-size:52px; margin-bottom:10px;">🌿 AI Study Mentor</h1>
-
-    <p style="font-size:20px; opacity:0.9;">
-        Trợ lý học tập thông minh giúp bạn tăng điểm nhanh chóng 🚀
-    </p>
-
-</div>
-""", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 # luôn khai báo biến trước để tránh lỗi nhảy giao diện
 st.markdown("## 🧾 Thông tin học tập")
 col1, col2 = st.columns(2)
