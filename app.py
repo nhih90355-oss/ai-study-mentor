@@ -41,6 +41,10 @@ box-shadow:0 20px 50px rgba(0,0,0,0.15);
 🌿 AI Study Mentor
 </h1>
 
+<p style="font-size:18px; margin-top:5px; opacity:0.85;">
+🏫 Trường PTDTNT THPT Đam San
+</p>
+
 <p style="font-size:22px; opacity:0.9;">
 Biến việc học thành hệ thống có chiến lược 🚀
 </p>
