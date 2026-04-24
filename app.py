@@ -167,10 +167,10 @@ def ai_mentor(d, name, target, time, mood, subject):
 # ===== BUTTON =====
 if menu == "📊 Phân tích":
     if st.button("🚀 Phân tích"):
-    if ten == "":
-        st.warning("Nhập tên!")
-    else:
-        kq = ai_mentor(diem, ten, mucTieu, gioHoc, tamLy, mon)
+        if ten == "":
+            st.warning("Nhập tên!")
+        else:
+            kq = ai_mentor(diem, ten, mucTieu, gioHoc, tamLy, mon)
 
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.subheader("📊 Kết quả")
