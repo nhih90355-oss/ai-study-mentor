@@ -25,7 +25,7 @@ p {
 .card:hover {
     transform: translateY(-5px);
 }
-<style>
+</style>
 
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
@@ -165,7 +165,7 @@ def ai_mentor(d, name, target, time, mood, subject):
     return result
 
 # ===== BUTTON =====
-elif menu == "📊 Phân tích":
+if menu == "📊 Phân tích":
     if st.button("🚀 Phân tích"):
     if ten == "":
         st.warning("Nhập tên!")
@@ -179,15 +179,6 @@ elif menu == "📊 Phân tích":
 
 # ===== DASHBOARD =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
-if menu == "🏠 Trang chính":
-    st.write("Trang chính")
-
-elif menu == "📊 Phân tích":
-    st.write("Phân tích")
-
-elif menu == "📈 Tiến trình":
-    st.write("Tiến trình")
-
 progress = diem / mucTieu if mucTieu > 0 else 0
 st.progress(min(progress, 1.0))
 st.write(f"Bạn đạt {progress*100:.1f}% mục tiêu")
