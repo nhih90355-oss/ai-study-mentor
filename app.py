@@ -180,13 +180,13 @@ elif menu == "📊 Phân tích":
 # ===== DASHBOARD =====
 st.markdown('<div class="card">', unsafe_allow_html=True)
 if menu == "🏠 Trang chính":
-    # code trang chính
+    st.write("Trang chính")
 
 elif menu == "📊 Phân tích":
-    # code phân tích
+    st.write("Phân tích")
 
 elif menu == "📈 Tiến trình":
-    # code dashboard
+    st.write("Tiến trình")
 
 progress = diem / mucTieu if mucTieu > 0 else 0
 st.progress(min(progress, 1.0))
