@@ -26,7 +26,27 @@ input, textarea {color:#111827 !important; background:#ffffff !important;}
 
 st.sidebar.title('📌 Menu')
 menu = st.sidebar.radio('Chọn chức năng',['🏠 Trang chính','📊 Phân tích','📈 Tiến trình'])
+st.markdown("""
+<div style="
+padding:70px 20px;
+text-align:center;
+border-radius:25px;
+background: linear-gradient(135deg,#6366f1,#a855f7,#ec4899);
+color:white;
+margin-bottom:40px;
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+">
 
+<h1 style="font-size:60px; margin-bottom:10px;">
+🌿 AI Study Mentor
+</h1>
+
+<p style="font-size:22px; opacity:0.9;">
+Biến việc học thành hệ thống có chiến lược 🚀
+</p>
+
+</div>
+""", unsafe_allow_html=True)
 st.markdown("""
 <div style="padding:60px 20px; text-align:center; border-radius:20px;
 background: linear-gradient(135deg,#6366f1,#a855f7);
